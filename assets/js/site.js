@@ -769,7 +769,7 @@
     const updateCalc = () => {
       const amount = Math.max(0, parseFloat(calcAmount.value) || 0);
       const isIntl = calcType.value === 'international';
-      const rate = isIntl ? 0.04 : 0.006;
+      const rate = isIntl ? 0.04 : 0.003;
       const fee = amount * rate;
       const gst = fee * 0.18;
       const total = fee + gst;
@@ -868,14 +868,14 @@
     const parseAmt = (v) => parseFloat(String(v).replace(/,/g, '')) || 0;
 
     const methodRate = (amountInr) => {
-      if (!methodSel) return 0.006;
+      if (!methodSel) return 0.003;
       const v = methodSel.value;
       if (v === 'debit') return amountInr < 2000 ? 0.015 : 0.019;
       return parseFloat(v);
     };
 
     const methodPct = (amountInr) => {
-      if (!methodSel) return '0.6%';
+      if (!methodSel) return '0.3%';
       const v = methodSel.value;
       if (v === 'debit') return amountInr < 2000 ? '1.5%' : '1.9%';
       return (parseFloat(v) * 100).toFixed(1).replace(/\.0$/, '') + '%';
