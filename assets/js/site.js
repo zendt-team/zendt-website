@@ -769,7 +769,7 @@
     const updateCalc = () => {
       const amount = Math.max(0, parseFloat(calcAmount.value) || 0);
       const isIntl = calcType.value === 'international';
-      const rate = isIntl ? 0.04 : 0.003;
+      const rate = isIntl ? 0.029 : 0.003;
       const fee = amount * rate;
       const gst = fee * 0.18;
       const total = fee + gst;
@@ -897,7 +897,7 @@
           }
         }
         if (grossLabel) grossLabel.textContent = 'Gross (in INR)';
-        if (feeLabel) feeLabel.textContent = 'Platform fee (4%)';
+        if (feeLabel) feeLabel.textContent = 'Platform fee (2.9%)';
       } else {
         if (rateLine) rateLine.textContent = 'Settles T+1 to your INR account';
         if (grossLabel) grossLabel.textContent = 'Amount charged';
@@ -919,7 +919,7 @@
       } else {
         gross = amt;
       }
-      const feeR = isIntl ? 0.04 : methodRate(amt);
+      const feeR = isIntl ? 0.029 : methodRate(amt);
       const fee = gross * feeR;
       const gst = fee * 0.18;
       const net = gross - fee - gst;

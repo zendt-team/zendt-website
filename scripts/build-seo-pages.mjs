@@ -257,11 +257,11 @@ const comparisons = [
     file: 'compare/zendt-vs-payoneer.html',
     slug: 'zendt-vs-payoneer',
     alt: 'Payoneer',
-    blurb: 'GCC corridor support, domestic UPI, and a flat 4% international rate with no hidden FX markup.',
-    tags: ['4% flat fee', 'GCC support', 'UPI included'],
-    intro: 'Payoneer is a global payout platform used by many Indian freelancers. Zendt is built specifically for India — GCC corridor support, domestic UPI, and a flat 4% international rate with no hidden FX markup.',
+    blurb: 'GCC corridor support, domestic UPI, and a 2.9% international rate with no hidden FX markup.',
+    tags: ['2.9% fee', 'GCC support', 'UPI included'],
+    intro: 'Payoneer is a global payout platform used by many Indian freelancers. Zendt is built specifically for India — GCC corridor support, domestic UPI, and a 2.9% international rate with no hidden FX markup.',
     rows: [
-      ['International fee', '4% flat on settlement', '3–5% + FX spread'],
+      ['International fee', '2.9% on settlement', '3–5% + FX spread'],
       ['GCC / AED support', 'Full corridor support', 'Limited Gulf coverage'],
       ['Domestic UPI', '0.3% with full platform', 'Not available'],
       ['INR settlement', 'Direct to Indian bank', 'Via Payoneer balance → withdrawal'],
@@ -270,7 +270,7 @@ const comparisons = [
     ],
     faqs: [
       { q: 'Is Zendt a Payoneer alternative in India?', a: 'Yes. Zendt is designed for Indian freelancers who want INR settlement, GCC client support, and domestic UPI in one platform at transparent published rates.' },
-      { q: 'Is Zendt cheaper than Payoneer?', a: 'Zendt charges a flat 4% on international receipts with no FX markup beyond the live mid-market rate. Payoneer total cost often includes FX spread and withdrawal fees that push effective rates higher.' },
+      { q: 'Is Zendt cheaper than Payoneer?', a: 'Zendt charges 2.9% on international receipts with no FX markup beyond the live mid-market rate. Payoneer total cost often includes FX spread and withdrawal fees that push effective rates higher.' },
     ],
   },
   {
@@ -281,7 +281,7 @@ const comparisons = [
     tags: ['Gulf corridor', 'Domestic UPI', 'Freelancer profile'],
     intro: 'Skydo and Zendt both serve Indian freelancers receiving international payments. Zendt differentiates on GCC corridor coverage, domestic UPI at 0.3%, and a freelancer profile — in one platform.',
     rows: [
-      ['International fee', '4% flat', 'Published tiered rates'],
+      ['International fee', '2.9%', 'Published tiered rates'],
       ['GCC support', '150+ currencies incl. AED, SAR, QAR', 'Varies by corridor'],
       ['Domestic UPI', '0.3%', 'Focus on international'],
       ['Payment link + invoice', 'Yes', 'Yes'],
@@ -289,7 +289,7 @@ const comparisons = [
       ['Settlement', 'T+3 intl · T+1 domestic', 'Varies'],
     ],
     faqs: [
-      { q: 'How does Zendt compare to Skydo?', a: 'Both platforms help Indian freelancers receive foreign client payments. Zendt emphasises Gulf corridor support, flat 4% international pricing, and domestic UPI on the same dashboard.' },
+      { q: 'How does Zendt compare to Skydo?', a: 'Both platforms help Indian freelancers receive foreign client payments. Zendt emphasises Gulf corridor support, 2.9% international pricing, and domestic UPI on the same dashboard.' },
     ],
   },
   {
@@ -305,7 +305,7 @@ const comparisons = [
       ['GCC corridor', 'Designed for Gulf clients', 'Supported but not specialised'],
       ['Domestic UPI', '0.3%', 'Not a core product'],
       ['INR settlement', 'To Indian bank after KYC', 'To Indian bank'],
-      ['Pricing model', '4% flat platform fee', 'Per-transfer fees + FX'],
+      ['Pricing model', '2.9% platform fee', 'Per-transfer fees + FX'],
     ],
     faqs: [
       { q: 'Should I use Wise or Zendt as a freelancer?', a: 'Wise works well for ad-hoc transfers. Zendt is better when you invoice clients regularly, need payment links, want domestic and international in one place, and prefer a flat published fee on cross-border receipts.' },
@@ -319,7 +319,7 @@ const comparisons = [
     tags: ['Indian fintech', 'Payment links', 'GCC currencies'],
     intro: 'BriskPe and Zendt both target Indian businesses and freelancers receiving foreign payments. Compare fees, GCC support, and whether domestic collections are included.',
     rows: [
-      ['International pricing', '4% flat published', 'Varies — check published rates'],
+      ['International pricing', '2.9% published', 'Varies — check published rates'],
       ['Payment links', 'Yes', 'Yes'],
       ['GCC currencies', 'AED, SAR, QAR native support', 'Check current coverage'],
       ['Domestic UPI', '0.3% with platform', 'Varies'],
@@ -384,7 +384,7 @@ const corridors = [
     slug: 'saudi-arabia',
     country: 'Saudi Arabia',
     currency: 'SAR',
-    intro: 'Receive Saudi Riyal payments from Riyadh and GCC clients. Zendt settles to your Indian bank account in INR with transparent 4% platform fee and T+3 international settlement.',
+    intro: 'Receive Saudi Riyal payments from Riyadh and GCC clients. Zendt settles to your Indian bank account in INR with transparent 2.9% platform fee and T+3 international settlement.',
   },
   {
     file: 'receive-payments/qatar.html',
@@ -408,7 +408,7 @@ for (const c of corridors) {
     heroMeta: `GCC · ${c.country}`,
     article: true,
     faqs: [
-      { q: `How do I get paid from ${c.country} as an Indian freelancer?`, a: `Send your client a Zendt invoice or payment link. They pay in ${c.currency}. After KYC verification, funds settle to your Indian bank account in INR at the live mid-market rate, minus the published 4% platform fee and applicable GST on the fee.` },
+      { q: `How do I get paid from ${c.country} as an Indian freelancer?`, a: `Send your client a Zendt invoice or payment link. They pay in ${c.currency}. After KYC verification, funds settle to your Indian bank account in INR at the live mid-market rate, minus the published 2.9% platform fee and applicable GST on the fee.` },
       { q: 'Is this FEMA compliant?', a: 'Zendt operates through RBI-licensed banking partners with KYC/AML onboarding. Export of services receipts must follow applicable FEMA and GST rules for your business structure.' },
     ],
     body: `<p>${c.intro}</p>
