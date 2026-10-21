@@ -9,6 +9,7 @@ import { fileURLToPath } from 'url';
 import {
   SITE,
   organizationSchema,
+  founderSchemas,
   breadcrumbSchema,
   faqSchema,
   articleSchema,
@@ -32,7 +33,7 @@ function ldJson(obj) {
 
 function head({ depth, title, description, canonical, extraSchema = [] }) {
   const r = rel(depth);
-  const schemas = [organizationSchema(), ...extraSchema];
+  const schemas = [organizationSchema(), ...founderSchemas(), ...extraSchema];
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,7 +154,7 @@ ${nav(depth)}
   <header class="page-hero wrap">
     <nav class="breadcrumb reveal" aria-label="Breadcrumb">${breadcrumbHtml}</nav>
     <p class="page-hero__meta reveal">${heroMeta}</p>
-    <h1 class="reveal">${title.replace(/ · Zendt.*/, '').split(' — ')[0]}</h1>
+    <h1 class="reveal">${title.replace(/ · Zendt.*/, '').split(' — ')[0].split(' · ')[0]}</h1>
   </header>
   <section class="legal">
     <div class="wrap legal__inner reveal">
@@ -178,25 +179,34 @@ const compareTable = (rows) => `<table class="cmp-table"><thead><tr><th>Feature<
 page({
   file: 'about.html',
   depth: 0,
-  title: 'About Zendt Payments — Indian Freelancer Payment Platform',
-  meta: 'Zendt Payments Pvt. Ltd. is a Kochi-based fintech building licensed payment infrastructure for Indian freelancers receiving international and domestic client payments.',
+  title: 'About Zendt · The Financial OS for Indian Freelancers',
+  meta: 'Zendt is the financial OS for Indian freelancers. Invoice clients, receive international and domestic payments and manage your money, all in one place.',
   breadcrumb: [{ name: 'About', url: `${SITE}/about` }],
   heroMeta: 'Company',
   article: true,
-  body: `<p><strong>Zendt Payments Pvt. Ltd.</strong> builds payment infrastructure for Indian freelancers and independent professionals. We help you invoice international clients, share payment links in 150+ fiat currencies, and settle proceeds to your INR bank account — with domestic UPI collections for Indian clients on the same platform.</p>
-<h2>Who we are</h2>
-<p>Founded by <strong>Alen Thomas &amp; Akshay K Rao</strong> in Kochi, Kerala, Zendt was built around a gap other platforms miss: Indian freelancers earning from the Gulf, US, UK, and EU need one place to get paid without losing 6–9% to hidden FX and correspondent bank fees.</p>
-<h2>Regulatory model</h2>
+  body: `<p><strong>Zendt is the financial OS for Indian freelancers.</strong> It lets freelancers invoice clients, receive international and domestic payments and manage their money, all in one place.</p>
+<p>Freelancers in India run their work across bank transfers, payment apps, invoice tools and spreadsheets. Zendt puts all of it in one app, built only for them.</p>
+<h2>What you can do with Zendt</h2>
 <ul>
-<li><strong>Legal entity:</strong> Zendt Payments Pvt. Ltd., India</li>
-<li><strong>Office:</strong> Rajagiri Orbiit, Infopark Phase 1, Kakkanad, Kochi, Kerala</li>
-<li><strong>Banking &amp; settlement:</strong> RBI-licensed banking and payment partners (disclosed on site)</li>
-<li><strong>Infrastructure:</strong> Zwitch</li>
-<li><strong>Compliance:</strong> KYC, AML, and FEMA-aligned onboarding</li>
+<li><strong>Invoice</strong> clients in India and abroad, and see every invoice move from sent to paid</li>
+<li><strong>Receive domestic payments</strong> through one personal link that takes UPI, cards and net banking</li>
+<li><strong>Receive international payments</strong> through collection accounts in 17 currencies and payment links in 150+ currencies, settled in INR (early access)</li>
+<li><strong>Manage</strong> your income by client and month, with records ready for tax filing</li>
 </ul>
-<p>Zendt is <strong>not</strong> a cryptocurrency exchange, investment platform, or forex trading product. We process fiat client payments only.</p>
+<h2>Leadership</h2>
+<p><strong>Alen Thomas, Founder and CEO.</strong> Alen Thomas is the Founder and CEO of Zendt (Zendt Payments Private Limited), the financial OS for Indian freelancers. Zendt helps freelancers across India invoice clients, receive international and domestic payments and manage their money, all in one place. <a href="https://www.linkedin.com/in/alenthomass/" target="_blank" rel="noopener">LinkedIn</a></p>
+<p><strong>Akshay K, Co-founder and CTO.</strong> Akshay K leads technology at Zendt, including the payment integrations, platform and security. <a href="https://www.linkedin.com/in/akshayk1810/" target="_blank" rel="noopener">LinkedIn</a></p>
+<h2>Company</h2>
+<ul>
+<li><strong>Legal entity:</strong> Zendt Payments Private Limited (CIN U62013KL2025PTC093716)</li>
+<li><strong>Recognition:</strong> DPIIT recognised startup under Startup India (DIPP211145) and Kerala Startup Mission certified startup</li>
+<li><strong>Headquarters:</strong> Rajagiri Orbiit, Infopark Phase 1, Kakkanad, Kochi, Kerala</li>
+</ul>
+<h2>How payments work</h2>
+<p>Zendt is a technology platform. Payments are processed and settled by RBI-licensed payment partners, and Zendt does not hold customer funds. Every user completes KYC before receiving payments.</p>
+<p>Zendt is <strong>not</strong> a bank, remittance service, cryptocurrency exchange or investment platform.</p>
 <h2>Contact</h2>
-<p>Email <a href="mailto:hello@zendtpayments.com">hello@zendtpayments.com</a> · Phone <a href="tel:+917356004147">+91 73560 04147</a></p>`,
+<p>Product and support: <a href="mailto:hello@zendtpayments.com">hello@zendtpayments.com</a><br />General enquiries, partnerships and press: <a href="mailto:contact@zendtpayments.com">contact@zendtpayments.com</a><br />Phone and WhatsApp: <a href="tel:+917356004147">+91 73560 04147</a></p>`,
 });
 
 page({
@@ -239,7 +249,7 @@ page({
 <h2>150+ currencies</h2>
 <p>Receive from US, UK, UAE, Saudi, Qatar, Australia, Canada, EU, Singapore, and more at live FX.</p>
 <h2>Domestic UPI</h2>
-<p>Flat 0.6% on UPI from Indian clients with invoicing, links, and tracking included.</p>`,
+<p>Flat 0.3% on UPI from Indian clients with invoicing, links, and tracking included.</p>`,
 });
 
 const comparisons = [
@@ -247,39 +257,39 @@ const comparisons = [
     file: 'compare/zendt-vs-payoneer.html',
     slug: 'zendt-vs-payoneer',
     alt: 'Payoneer',
-    blurb: 'GCC corridor support, domestic UPI, and a flat 4% international rate with no hidden FX markup.',
-    tags: ['4% flat fee', 'GCC support', 'UPI included'],
-    intro: 'Payoneer is a global payout platform used by many Indian freelancers. Zendt is built specifically for India — GCC corridor support, domestic UPI, and a flat 4% international rate with no hidden FX markup.',
+    blurb: 'GCC corridor support, domestic UPI, and a 2.9% international rate with no hidden FX markup.',
+    tags: ['2.9% fee', 'GCC support', 'UPI included'],
+    intro: 'Payoneer is a global payout platform used by many Indian freelancers. Zendt is built specifically for India — GCC corridor support, domestic UPI, and a 2.9% international rate with no hidden FX markup.',
     rows: [
-      ['International fee', '4% flat on settlement', '3–5% + FX spread'],
+      ['International fee', '2.9% on settlement', '3–5% + FX spread'],
       ['GCC / AED support', 'Full corridor support', 'Limited Gulf coverage'],
-      ['Domestic UPI', '0.6% with full platform', 'Not available'],
+      ['Domestic UPI', '0.3% with full platform', 'Not available'],
       ['INR settlement', 'Direct to Indian bank', 'Via Payoneer balance → withdrawal'],
       ['Freelancer profile', 'Included', 'Not included'],
       ['Settlement (intl)', 'T+3 business days', '3–5+ days typical'],
     ],
     faqs: [
       { q: 'Is Zendt a Payoneer alternative in India?', a: 'Yes. Zendt is designed for Indian freelancers who want INR settlement, GCC client support, and domestic UPI in one platform at transparent published rates.' },
-      { q: 'Is Zendt cheaper than Payoneer?', a: 'Zendt charges a flat 4% on international receipts with no FX markup beyond the live mid-market rate. Payoneer total cost often includes FX spread and withdrawal fees that push effective rates higher.' },
+      { q: 'Is Zendt cheaper than Payoneer?', a: 'Zendt charges 2.9% on international receipts with no FX markup beyond the live mid-market rate. Payoneer total cost often includes FX spread and withdrawal fees that push effective rates higher.' },
     ],
   },
   {
     file: 'compare/zendt-vs-skydo.html',
     slug: 'zendt-vs-skydo',
     alt: 'Skydo',
-    blurb: 'Gulf corridor coverage, domestic UPI at 0.6%, and a freelancer profile in one platform.',
+    blurb: 'Gulf corridor coverage, domestic UPI at 0.3%, and a freelancer profile in one platform.',
     tags: ['Gulf corridor', 'Domestic UPI', 'Freelancer profile'],
-    intro: 'Skydo and Zendt both serve Indian freelancers receiving international payments. Zendt differentiates on GCC corridor coverage, domestic UPI at 0.6%, and a freelancer profile — in one platform.',
+    intro: 'Skydo and Zendt both serve Indian freelancers receiving international payments. Zendt differentiates on GCC corridor coverage, domestic UPI at 0.3%, and a freelancer profile — in one platform.',
     rows: [
-      ['International fee', '4% flat', 'Published tiered rates'],
+      ['International fee', '2.9%', 'Published tiered rates'],
       ['GCC support', '150+ currencies incl. AED, SAR, QAR', 'Varies by corridor'],
-      ['Domestic UPI', '0.6%', 'Focus on international'],
+      ['Domestic UPI', '0.3%', 'Focus on international'],
       ['Payment link + invoice', 'Yes', 'Yes'],
       ['Freelancer profile', 'Yes', 'Limited'],
       ['Settlement', 'T+3 intl · T+1 domestic', 'Varies'],
     ],
     faqs: [
-      { q: 'How does Zendt compare to Skydo?', a: 'Both platforms help Indian freelancers receive foreign client payments. Zendt emphasises Gulf corridor support, flat 4% international pricing, and domestic UPI on the same dashboard.' },
+      { q: 'How does Zendt compare to Skydo?', a: 'Both platforms help Indian freelancers receive foreign client payments. Zendt emphasises Gulf corridor support, 2.9% international pricing, and domestic UPI on the same dashboard.' },
     ],
   },
   {
@@ -293,9 +303,9 @@ const comparisons = [
       ['Built for freelancers', 'Invoicing + links + profile', 'General transfers'],
       ['Client payment link', 'Native checkout in client currency', 'Account details / manual transfer'],
       ['GCC corridor', 'Designed for Gulf clients', 'Supported but not specialised'],
-      ['Domestic UPI', '0.6%', 'Not a core product'],
+      ['Domestic UPI', '0.3%', 'Not a core product'],
       ['INR settlement', 'To Indian bank after KYC', 'To Indian bank'],
-      ['Pricing model', '4% flat platform fee', 'Per-transfer fees + FX'],
+      ['Pricing model', '2.9% platform fee', 'Per-transfer fees + FX'],
     ],
     faqs: [
       { q: 'Should I use Wise or Zendt as a freelancer?', a: 'Wise works well for ad-hoc transfers. Zendt is better when you invoice clients regularly, need payment links, want domestic and international in one place, and prefer a flat published fee on cross-border receipts.' },
@@ -309,10 +319,10 @@ const comparisons = [
     tags: ['Indian fintech', 'Payment links', 'GCC currencies'],
     intro: 'BriskPe and Zendt both target Indian businesses and freelancers receiving foreign payments. Compare fees, GCC support, and whether domestic collections are included.',
     rows: [
-      ['International pricing', '4% flat published', 'Varies — check published rates'],
+      ['International pricing', '2.9% published', 'Varies — check published rates'],
       ['Payment links', 'Yes', 'Yes'],
       ['GCC currencies', 'AED, SAR, QAR native support', 'Check current coverage'],
-      ['Domestic UPI', '0.6% with platform', 'Varies'],
+      ['Domestic UPI', '0.3% with platform', 'Varies'],
       ['Freelancer profile', 'Yes', 'Varies'],
       ['Settlement to INR', 'Licensed partner settlement', 'Licensed partner settlement'],
     ],
@@ -374,7 +384,7 @@ const corridors = [
     slug: 'saudi-arabia',
     country: 'Saudi Arabia',
     currency: 'SAR',
-    intro: 'Receive Saudi Riyal payments from Riyadh and GCC clients. Zendt settles to your Indian bank account in INR with transparent 4% platform fee and T+3 international settlement.',
+    intro: 'Receive Saudi Riyal payments from Riyadh and GCC clients. Zendt settles to your Indian bank account in INR with transparent 2.9% platform fee and T+3 international settlement.',
   },
   {
     file: 'receive-payments/qatar.html',
@@ -398,7 +408,7 @@ for (const c of corridors) {
     heroMeta: `GCC · ${c.country}`,
     article: true,
     faqs: [
-      { q: `How do I get paid from ${c.country} as an Indian freelancer?`, a: `Send your client a Zendt invoice or payment link. They pay in ${c.currency}. After KYC verification, funds settle to your Indian bank account in INR at the live mid-market rate, minus the published 4% platform fee and applicable GST on the fee.` },
+      { q: `How do I get paid from ${c.country} as an Indian freelancer?`, a: `Send your client a Zendt invoice or payment link. They pay in ${c.currency}. After KYC verification, funds settle to your Indian bank account in INR at the live mid-market rate, minus the published 2.9% platform fee and applicable GST on the fee.` },
       { q: 'Is this FEMA compliant?', a: 'Zendt operates through RBI-licensed banking partners with KYC/AML onboarding. Export of services receipts must follow applicable FEMA and GST rules for your business structure.' },
     ],
     body: `<p>${c.intro}</p>

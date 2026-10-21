@@ -43,28 +43,43 @@ src="https://www.facebook.com/tr?id=1334086671603194&ev=PageView&noscript=1"
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": "Organization",
       "@id": "https://www.zendtpayments.com/#organization",
-      "name": "Zendt Payments",
-      "legalName": "Zendt Payments Pvt. Ltd.",
+      "name": "Zendt",
+      "alternateName": "Zendt Payments",
+      "legalName": "Zendt Payments Private Limited",
       "url": "https://www.zendtpayments.com/",
       "logo": "https://www.zendtpayments.com/logo-full.png",
+      "description": "Zendt is the financial OS for Indian freelancers. It lets freelancers invoice clients, receive international and domestic payments and manage their money, all in one place.",
+      "slogan": "The financial OS for Indian freelancers",
       "foundingDate": "2024-12",
-      "founder": [
+      "founder": {
+        "@id": "https://www.zendtpayments.com/#alen-thomas"
+      },
+      "employee": [
         {
-          "@type": "Person",
-          "name": "Alen Thomas"
+          "@id": "https://www.zendtpayments.com/#alen-thomas"
         },
         {
-          "@type": "Person",
-          "name": "Akshay K Rao"
+          "@id": "https://www.zendtpayments.com/#akshay-k"
+        }
+      ],
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "CIN",
+          "value": "U62013KL2025PTC093716"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "DPIIT",
+          "value": "DIPP211145"
         }
       ],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Rajagiri Orbiit, Infopark Phase 1",
-        "addressLocality": "Kakkanad, Kochi",
+        "streetAddress": "Rajagiri Orbiit, Infopark Phase 1, Kakkanad",
+        "addressLocality": "Kochi",
         "addressRegion": "Kerala",
         "postalCode": "682042",
         "addressCountry": "IN"
@@ -73,22 +88,66 @@ src="https://www.facebook.com/tr?id=1334086671603194&ev=PageView&noscript=1"
         "@type": "Country",
         "name": "India"
       },
-      "description": "Invoicing and payments toolkit for Indian freelancers to bill international clients and receive INR settlements through licensed banking partners. Not cryptocurrency or investment.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-73560-04147",
-        "email": "hello@zendtpayments.com",
-        "contactType": "customer support",
-        "areaServed": "IN",
-        "availableLanguage": [
-          "English",
-          "Hindi"
-        ]
-      },
+      "email": "contact@zendtpayments.com",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "hello@zendtpayments.com",
+          "telephone": "+91-73560-04147",
+          "areaServed": "IN",
+          "availableLanguage": [
+            "English",
+            "Malayalam",
+            "Hindi"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "general enquiries",
+          "email": "contact@zendtpayments.com",
+          "areaServed": "IN"
+        }
+      ],
       "sameAs": [
         "https://www.linkedin.com/company/zendtpayments",
+        "https://www.instagram.com/zendtpayments",
         "https://x.com/zendtpayments",
-        "https://instagram.com/zendtpayments"
+        "https://apps.apple.com/app/id6775251573",
+        "https://play.google.com/store/apps/details?id=com.zendt.app",
+        "https://startups.startupmission.in/startups/ZD5PG",
+        "https://www.f6s.com/company/zendt-payments"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.zendtpayments.com/#alen-thomas",
+      "name": "Alen Thomas",
+      "jobTitle": "Founder and CEO",
+      "description": "Alen Thomas is the Founder and CEO of Zendt, the financial OS for freelancers across India.",
+      "worksFor": {
+        "@id": "https://www.zendtpayments.com/#organization"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Kochi, Kerala, India"
+      },
+      "url": "https://www.zendtpayments.com/about",
+      "sameAs": [
+        "https://www.linkedin.com/in/alenthomass/",
+        "https://x.com/AlenThomasss"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.zendtpayments.com/#akshay-k",
+      "name": "Akshay K",
+      "jobTitle": "Co-founder and CTO",
+      "worksFor": {
+        "@id": "https://www.zendtpayments.com/#organization"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/akshayk1810/"
       ]
     },
     {
@@ -118,12 +177,7 @@ src="https://www.facebook.com/tr?id=1334086671603194&ev=PageView&noscript=1"
       "datePublished": "2026-06-09",
       "dateModified": "2026-06-09",
       "author": {
-        "@type": "Person",
-        "name": "Alen Thomas",
-        "jobTitle": "Founder",
-        "worksFor": {
-          "@id": "https://www.zendtpayments.com/#organization"
-        }
+        "@id": "https://www.zendtpayments.com/#alen-thomas"
       },
       "publisher": {
         "@id": "https://www.zendtpayments.com/#organization"
@@ -192,7 +246,7 @@ src="https://www.facebook.com/tr?id=1334086671603194&ev=PageView&noscript=1"
 <h2>150+ currencies</h2>
 <p>Receive from US, UK, UAE, Saudi, Qatar, Australia, Canada, EU, Singapore, and more at live FX.</p>
 <h2>Domestic UPI</h2>
-<p>Flat 0.6% on UPI from Indian clients with invoicing, links, and tracking included.</p>
+<p>Flat 0.3% on UPI from Indian clients with invoicing, links, and tracking included.</p>
       
     </div>
   </section>
@@ -204,7 +258,7 @@ src="https://www.facebook.com/tr?id=1334086671603194&ev=PageView&noscript=1"
         <a class="logo" href="index.html#top" aria-label="Zendt Payments">
           <span class="foot__logo-full" aria-hidden="true"></span>
         </a>
-        <p class="foot__tagline">Global Payments. Reimagined.<br />Receive · Manage · Spend.</p>
+        <p class="foot__tagline">The financial OS for Indian freelancers.<br />Invoice · Receive · Manage.</p>
         <div class="foot__connect">
         <div class="foot__social">
           <a href="https://instagram.com/zendtpayments" target="_blank" rel="noopener" aria-label="Zendt on Instagram">

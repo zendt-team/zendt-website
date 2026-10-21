@@ -43,28 +43,43 @@ src="https://www.facebook.com/tr?id=1334086671603194&ev=PageView&noscript=1"
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": "Organization",
       "@id": "https://www.zendtpayments.com/#organization",
-      "name": "Zendt Payments",
-      "legalName": "Zendt Payments Pvt. Ltd.",
+      "name": "Zendt",
+      "alternateName": "Zendt Payments",
+      "legalName": "Zendt Payments Private Limited",
       "url": "https://www.zendtpayments.com/",
       "logo": "https://www.zendtpayments.com/logo-full.png",
+      "description": "Zendt is the financial OS for Indian freelancers. It lets freelancers invoice clients, receive international and domestic payments and manage their money, all in one place.",
+      "slogan": "The financial OS for Indian freelancers",
       "foundingDate": "2024-12",
-      "founder": [
+      "founder": {
+        "@id": "https://www.zendtpayments.com/#alen-thomas"
+      },
+      "employee": [
         {
-          "@type": "Person",
-          "name": "Alen Thomas"
+          "@id": "https://www.zendtpayments.com/#alen-thomas"
         },
         {
-          "@type": "Person",
-          "name": "Akshay K Rao"
+          "@id": "https://www.zendtpayments.com/#akshay-k"
+        }
+      ],
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "CIN",
+          "value": "U62013KL2025PTC093716"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "DPIIT",
+          "value": "DIPP211145"
         }
       ],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Rajagiri Orbiit, Infopark Phase 1",
-        "addressLocality": "Kakkanad, Kochi",
+        "streetAddress": "Rajagiri Orbiit, Infopark Phase 1, Kakkanad",
+        "addressLocality": "Kochi",
         "addressRegion": "Kerala",
         "postalCode": "682042",
         "addressCountry": "IN"
@@ -73,22 +88,66 @@ src="https://www.facebook.com/tr?id=1334086671603194&ev=PageView&noscript=1"
         "@type": "Country",
         "name": "India"
       },
-      "description": "Payment infrastructure for Indian freelancers to receive international client payments in fiat currencies and settle to INR bank accounts. Not cryptocurrency or investment.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-73560-04147",
-        "email": "hello@zendtpayments.com",
-        "contactType": "customer support",
-        "areaServed": "IN",
-        "availableLanguage": [
-          "English",
-          "Hindi"
-        ]
-      },
+      "email": "contact@zendtpayments.com",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "hello@zendtpayments.com",
+          "telephone": "+91-73560-04147",
+          "areaServed": "IN",
+          "availableLanguage": [
+            "English",
+            "Malayalam",
+            "Hindi"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "general enquiries",
+          "email": "contact@zendtpayments.com",
+          "areaServed": "IN"
+        }
+      ],
       "sameAs": [
         "https://www.linkedin.com/company/zendtpayments",
+        "https://www.instagram.com/zendtpayments",
         "https://x.com/zendtpayments",
-        "https://instagram.com/zendtpayments"
+        "https://apps.apple.com/app/id6775251573",
+        "https://play.google.com/store/apps/details?id=com.zendt.app",
+        "https://startups.startupmission.in/startups/ZD5PG",
+        "https://www.f6s.com/company/zendt-payments"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.zendtpayments.com/#alen-thomas",
+      "name": "Alen Thomas",
+      "jobTitle": "Founder and CEO",
+      "description": "Alen Thomas is the Founder and CEO of Zendt, the financial OS for freelancers across India.",
+      "worksFor": {
+        "@id": "https://www.zendtpayments.com/#organization"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Kochi, Kerala, India"
+      },
+      "url": "https://www.zendtpayments.com/about",
+      "sameAs": [
+        "https://www.linkedin.com/in/alenthomass/",
+        "https://x.com/AlenThomasss"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.zendtpayments.com/#akshay-k",
+      "name": "Akshay K",
+      "jobTitle": "Co-founder and CTO",
+      "worksFor": {
+        "@id": "https://www.zendtpayments.com/#organization"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/akshayk1810/"
       ]
     },
     {
@@ -124,12 +183,7 @@ src="https://www.facebook.com/tr?id=1334086671603194&ev=PageView&noscript=1"
       "datePublished": "2026-06-09",
       "dateModified": "2026-06-09",
       "author": {
-        "@type": "Person",
-        "name": "Alen Thomas",
-        "jobTitle": "Founder",
-        "worksFor": {
-          "@id": "https://www.zendtpayments.com/#organization"
-        }
+        "@id": "https://www.zendtpayments.com/#alen-thomas"
       },
       "publisher": {
         "@id": "https://www.zendtpayments.com/#organization"
@@ -145,7 +199,7 @@ src="https://www.facebook.com/tr?id=1334086671603194&ev=PageView&noscript=1"
           "name": "How do I get paid from Qatar as an Indian freelancer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Send your client a Zendt invoice or payment link. They pay in QAR. After KYC verification, funds settle to your Indian bank account in INR at the live mid-market rate, minus the published 4% platform fee and applicable GST on the fee."
+            "text": "Send your client a Zendt invoice or payment link. They pay in QAR. After KYC verification, funds settle to your Indian bank account in INR at the live mid-market rate, minus the published 2.9% platform fee and applicable GST on the fee."
           }
         },
         {
@@ -218,7 +272,7 @@ src="https://www.facebook.com/tr?id=1334086671603194&ev=PageView&noscript=1"
 <h2>Why freelancers choose Zendt for the Gulf</h2>
 <p>Most global platforms under-support GCC corridors. Zendt was built where Indian freelancers actually earn — UAE, Saudi, and Qatar included in 150+ supported currencies.</p>
 <p><a href="../pricing.html">See fees</a> · <a href="../index.html#waitlist">Request early access</a></p>
-      <div class="faq-block"><h2>Frequently asked questions</h2><details><summary>How do I get paid from Qatar as an Indian freelancer?</summary><p>Send your client a Zendt invoice or payment link. They pay in QAR. After KYC verification, funds settle to your Indian bank account in INR at the live mid-market rate, minus the published 4% platform fee and applicable GST on the fee.</p></details><details><summary>Is this FEMA compliant?</summary><p>Zendt operates through RBI-licensed banking partners with KYC/AML onboarding. Export of services receipts must follow applicable FEMA and GST rules for your business structure.</p></details><details><summary>Is Zendt a licensed payment aggregator?</summary><p>No. Zendt is a software toolkit for freelancers. Payment collection, INR settlement, and compliance are operated through Zwitch, a licensed payment aggregator, and our RBI-licensed banking partners. Zendt does not hold or aggregate client funds.</p></details></div>
+      <div class="faq-block"><h2>Frequently asked questions</h2><details><summary>How do I get paid from Qatar as an Indian freelancer?</summary><p>Send your client a Zendt invoice or payment link. They pay in QAR. After KYC verification, funds settle to your Indian bank account in INR at the live mid-market rate, minus the published 2.9% platform fee and applicable GST on the fee.</p></details><details><summary>Is this FEMA compliant?</summary><p>Zendt operates through RBI-licensed banking partners with KYC/AML onboarding. Export of services receipts must follow applicable FEMA and GST rules for your business structure.</p></details><details><summary>Is Zendt a licensed payment aggregator?</summary><p>No. Zendt is a software toolkit for freelancers. Payment collection, INR settlement, and compliance are operated through Zwitch, a licensed payment aggregator, and our RBI-licensed banking partners. Zendt does not hold or aggregate client funds.</p></details></div>
     </div>
   </section>
 </main>
@@ -229,7 +283,7 @@ src="https://www.facebook.com/tr?id=1334086671603194&ev=PageView&noscript=1"
         <a class="logo" href="../index.html#top" aria-label="Zendt Payments">
           <span class="foot__logo-full" aria-hidden="true"></span>
         </a>
-        <p class="foot__tagline">Global Payments. Reimagined.<br />Receive · Manage · Spend.</p>
+        <p class="foot__tagline">The financial OS for Indian freelancers.<br />Invoice · Receive · Manage.</p>
         <div class="foot__connect">
         <div class="foot__social">
           <a href="https://instagram.com/zendtpayments" target="_blank" rel="noopener" aria-label="Zendt on Instagram">

@@ -3,43 +3,121 @@ export const SITE = 'https://www.zendtpayments.com';
 
 export function organizationSchema() {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': `${SITE}/#organization`,
-    name: 'Zendt Payments',
-    legalName: 'Zendt Payments Pvt. Ltd.',
-    url: `${SITE}/`,
-    logo: `${SITE}/logo-full.png`,
-    foundingDate: '2024-12',
-    founder: [
-      { '@type': 'Person', name: 'Alen Thomas' },
-      { '@type': 'Person', name: 'Akshay K Rao' },
-    ],
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Rajagiri Orbiit, Infopark Phase 1',
-      addressLocality: 'Kakkanad, Kochi',
-      addressRegion: 'Kerala',
-      postalCode: '682042',
-      addressCountry: 'IN',
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.zendtpayments.com/#organization",
+    "name": "Zendt",
+    "alternateName": "Zendt Payments",
+    "legalName": "Zendt Payments Private Limited",
+    "url": "https://www.zendtpayments.com/",
+    "logo": "https://www.zendtpayments.com/logo-full.png",
+    "description": "Zendt is the financial OS for Indian freelancers. It lets freelancers invoice clients, receive international and domestic payments and manage their money, all in one place.",
+    "slogan": "The financial OS for Indian freelancers",
+    "foundingDate": "2024-12",
+    "founder": {
+      "@id": "https://www.zendtpayments.com/#alen-thomas"
     },
-    areaServed: { '@type': 'Country', name: 'India' },
-    description:
-      'Payment infrastructure for Indian freelancers to receive international client payments in fiat currencies and settle to INR bank accounts. Not cryptocurrency or investment.',
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+91-73560-04147',
-      email: 'hello@zendtpayments.com',
-      contactType: 'customer support',
-      areaServed: 'IN',
-      availableLanguage: ['English', 'Hindi'],
-    },
-    sameAs: [
-      'https://www.linkedin.com/company/zendtpayments',
-      'https://x.com/zendtpayments',
-      'https://instagram.com/zendtpayments',
+    "employee": [
+      {
+        "@id": "https://www.zendtpayments.com/#alen-thomas"
+      },
+      {
+        "@id": "https://www.zendtpayments.com/#akshay-k"
+      }
     ],
+    "identifier": [
+      {
+        "@type": "PropertyValue",
+        "propertyID": "CIN",
+        "value": "U62013KL2025PTC093716"
+      },
+      {
+        "@type": "PropertyValue",
+        "propertyID": "DPIIT",
+        "value": "DIPP211145"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rajagiri Orbiit, Infopark Phase 1, Kakkanad",
+      "addressLocality": "Kochi",
+      "addressRegion": "Kerala",
+      "postalCode": "682042",
+      "addressCountry": "IN"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    },
+    "email": "contact@zendtpayments.com",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "hello@zendtpayments.com",
+        "telephone": "+91-73560-04147",
+        "areaServed": "IN",
+        "availableLanguage": [
+          "English",
+          "Malayalam",
+          "Hindi"
+        ]
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "general enquiries",
+        "email": "contact@zendtpayments.com",
+        "areaServed": "IN"
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/company/zendtpayments",
+      "https://www.instagram.com/zendtpayments",
+      "https://x.com/zendtpayments",
+      "https://apps.apple.com/app/id6775251573",
+      "https://play.google.com/store/apps/details?id=com.zendt.app",
+      "https://startups.startupmission.in/startups/ZD5PG",
+      "https://www.f6s.com/company/zendt-payments"
+    ]
   };
+}
+
+export function founderSchemas() {
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://www.zendtpayments.com/#alen-thomas",
+      "name": "Alen Thomas",
+      "jobTitle": "Founder and CEO",
+      "description": "Alen Thomas is the Founder and CEO of Zendt, the financial OS for freelancers across India.",
+      "worksFor": {
+        "@id": "https://www.zendtpayments.com/#organization"
+      },
+      "homeLocation": {
+        "@type": "Place",
+        "name": "Kochi, Kerala, India"
+      },
+      "url": "https://www.zendtpayments.com/about",
+      "sameAs": [
+        "https://www.linkedin.com/in/alenthomass/",
+        "https://x.com/AlenThomasss"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://www.zendtpayments.com/#akshay-k",
+      "name": "Akshay K",
+      "jobTitle": "Co-founder and CTO",
+      "worksFor": {
+        "@id": "https://www.zendtpayments.com/#organization"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/akshayk1810/"
+      ]
+    }
+  ];
 }
 
 export function breadcrumbSchema(crumbs) {
